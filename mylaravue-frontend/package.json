@@ -14,11 +14,13 @@
     "core-js": "^3.6.5",
     "dns": "^0.2.2",
     "http2": "^3.3.7",
+    "moment": "^2.29.1",
     "popper": "^1.0.1",
     "rijs": "^0.9.1",
     "rijs.npm": "^2.0.0",
     "vue": "^2.6.11",
     "vue-router": "^3.5.1",
+    "vue2-editor": "^2.10.2",
     "vuex": "^3.6.2"
   },
   "devDependencies": {

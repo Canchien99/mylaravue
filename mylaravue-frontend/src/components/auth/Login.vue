@@ -22,15 +22,12 @@
                 <span class="login-footer-content">Don't have an account yet? <router-link to="/register">Sign up here</router-link></span>
             </div>
     </div>
-     <div id="loading" v-if="loading">
-        <div class="okr-bg-beforesend">
-            <img class="w-100" src="../../assets/unnamed.gif" alt="">
-        </div>
-    </div>
+    <Loading v-if="loading"></Loading>
   </div>
 </template>
 
 <script>
+import Loading from '@/components/custom/Loading'
 //import {mapActions, mapGetters} from 'vuex'
 import axios from 'axios'
 export default {
@@ -45,6 +42,7 @@ export default {
             errors: {}
         }
     },
+    components: { Loading },
     computed: {
        
         },
@@ -69,8 +67,5 @@ export default {
 </script>
 
 <style>
-    @import '../../assets/styles/styleAuth.css';
-    
-    
-
+    @import '~@/assets/styles/styleAuth.css';
 </style>

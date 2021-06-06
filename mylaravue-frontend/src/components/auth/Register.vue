@@ -30,18 +30,16 @@
                 <span class="login-footer-content">Already have an account? <router-link to="/login">Sign in here</router-link></span>
             </div>
     </div>
-     <div id="loading" v-if="loading">
-        <div class="okr-bg-beforesend">
-            <img class="w-100" src="../../assets/unnamed.gif" alt="">
-        </div>
-    </div>
+    <loading v-if="loading"></Loading>
   </div>
 </template>
 
 <script>
 //import {mapGetters} from 'vuex'
 import axios from 'axios'
+import Loading from '../custom/Loading.vue'
 export default {
+    components: { Loading },
     name: 'Login',
     data(){
         return{
@@ -77,5 +75,5 @@ export default {
 </script>
 
 <style>
-    @import '../../assets/styles/styleAuth.css';
+    @import '~@/assets/styles/styleAuth.css';
 </style>

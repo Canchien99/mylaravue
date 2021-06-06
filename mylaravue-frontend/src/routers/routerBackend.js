@@ -5,19 +5,39 @@ const backendRouter = [
         name: 'admin',
         children: [
             {
-                path: 'list',
+                path: 'list-posts',
                 component: () => import('../components/backend/posts/List'),
-                name: 'listpost',
+                name: 'listPosts',
             },
             {
-                path: 'create',
+                path: 'create-post',
                 component: () => import('../components/backend/posts/Create'),
-                name: 'createpost',
+                name: 'createPost',
+            },
+            {
+                path: 'edit-post/:id',
+                component: () => import('../components/backend/posts/Edit'),
+                name: 'editPost',
             },
             {
                 path: 'dashboard',
                 component: () => import('../components/backend/Dashboard'),
                 name: 'dashboard',
+            },
+            {
+                path: 'list-categories',
+                component: () => import('../components/backend/categories/List'),
+                name: 'listCategories',
+            },
+            {
+                path: 'create-category',
+                component: () => import('../components/backend/categories/Create'),
+                name: 'createCategory',
+            },
+            {
+                path: 'edit-category/:id',
+                component: () => import('../components/backend/categories/Edit'),
+                name: 'editCategory',
             },
         ],
         beforeEnter(to, from, next) {

@@ -9,7 +9,7 @@
 			<ul id="nav">
                 <li class="dropdown">
                     <a data-toggle="collapse" data-target="#nav-info" href="#">
-                        <img src="../../assets/logo.png" alt="avatar" width="20px" height="20px"> {{user.name}}<span class="sub-icon"></span>
+                        <img src="@/assets/logo.png" alt="avatar" width="20px" height="20px"> {{user.name}}<span class="sub-icon"></span>
                     </a>
                     <div id="nav-info" class="collapse">
                         <ul class="nav-slt">
@@ -20,20 +20,20 @@
                 </li>
                 <li class="current"><router-link :to="{ name: 'dashboard'}"><i class="fas fa-tachometer-alt"></i>  Dashboard</router-link></li>
                 <li class="dropdown">
-                    <a data-toggle="collapse" data-target="#nav-cate" href="#"><i class="fas fa-stream"></i> Category <span class="sub-icon"></span></a>
+                    <a data-toggle="collapse" data-target="#nav-cate" href="#"><i class="fas fa-stream"></i> Categories <span class="sub-icon"></span></a>
                     <div id="nav-cate" class="collapse">
                         <ul class="nav-slt">
-                            <li><router-link :to="{ name: 'createpost'}"><i class="fas fa-list-alt"></i> List Category</router-link></li>
-                            <li><router-link :to="{ name: 'createpost'}"><i class="fas fa-plus-square"></i> Add Category</router-link></li>
+                            <li><router-link :to="{ name: 'listCategories'}"><i class="fas fa-list-alt"></i> List Categories</router-link></li>
+                            <li><router-link :to="{ name: 'createCategory'}"><i class="fas fa-plus-square"></i> Add Category</router-link></li>
                         </ul>
                     </div>
 				</li>
                 <li class="dropdown">
-                    <a data-toggle="collapse" data-target="#nav-news" href="#"><i class="fas fa-newspaper"></i> News <span class="sub-icon"></span></a>
+                    <a data-toggle="collapse" data-target="#nav-news" href="#"><i class="fas fa-newspaper"></i> Posts <span class="sub-icon"></span></a>
                     <div id="nav-news" class="collapse">
                         <ul class="nav-slt">
-                            <li><router-link :to="{ name: 'listpost'}"><i class="fas fa-list-alt"></i> List News</router-link></li>
-                            <li><router-link :to="{ name: 'createpost'}"><i class="fas fa-plus-square"></i> Add News</router-link></li>
+                            <li><router-link :to="{ name: 'listPosts'}"><i class="fas fa-list-alt"></i> List Posts</router-link></li>
+                            <li><router-link :to="{ name: 'createPost'}"><i class="fas fa-plus-square"></i> Add Post</router-link></li>
                         </ul>
                     </div>
                 </li>
@@ -49,6 +49,8 @@
                         </ul>
                     </div>
                 </li>
+
+                
 
 			</ul>
 		</nav>

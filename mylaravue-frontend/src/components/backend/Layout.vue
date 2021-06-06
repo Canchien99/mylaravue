@@ -2,6 +2,7 @@
   <div id="admin">
       <left-sidebar> </left-sidebar>
       <router-view class="be-main"></router-view>
+      
   </div>
 </template>
 

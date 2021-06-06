@@ -2,10 +2,12 @@ const frontendRouter = [
     {
         path: '',
         component: () => import('../components/frontend/Layout'),
-        name: 'fe',
-        meta: {title: 'home'},
         children: [
-      
+            {
+                path: '',
+                component: () => import('../components/frontend/page/Home'),
+                name: 'home',
+            }
         ]
     },
 ]
