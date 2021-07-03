@@ -26,7 +26,7 @@
                         <td scope="row">{{index+1}}</td>
                         <td>
                             <p><router-link :to="{name: 'editPost', params:{id: post.id}}">{{post.title}}</router-link></p>
-                            <img :src="URL_IMAGES '/' post.image" alt="" width="100px">
+                            <img :src="URL_IMAGES +'/'+ post.image" alt="" width="100px">
                         </td>
                         <td>{{post.status}}</td>
                         <td>{{post.view}}</td>

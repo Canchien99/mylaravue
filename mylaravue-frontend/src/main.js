@@ -17,6 +17,10 @@ const router = new VueRouter({
     routes,
     mode: 'history'
 });
+router.beforeEach((to, from, next) => {
+    document.title = to.meta.title || 'myApp';
+    next();
+});
 
 new Vue({
     render: h => h(App),

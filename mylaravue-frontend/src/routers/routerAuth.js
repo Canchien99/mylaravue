@@ -2,13 +2,14 @@ const authRouter = [
     {
         path: '/login',
         component: () => import('../components/auth/Login'),
-        meta: {title: 'login'},
+        meta: {title: 'Login'},
         name: 'login',
     },
     {
         path: '/register',
         component: () => import('../components/auth/Register'),
-        name: 'login',
+        name: 'register',
+        meta: {title: 'Register'},
     }
 ]
 
