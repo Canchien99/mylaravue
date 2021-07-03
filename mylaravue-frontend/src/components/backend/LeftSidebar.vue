@@ -162,6 +162,7 @@ export default {
 
     #nav .nav-slt{
         margin-left: 20px;
+        list-style: none;
     }
 
     #nav .sub-icon::after{
