@@ -27,6 +27,7 @@ const postModule = {
             try {
                 const response = await axios.get(`${RESOURCE_POSTS}/${id}`, { headers: { Authorization: 'Bearer ' + state.token }})
                 commit('SET_POST', response.data)
+                console.log(response.data);
             } catch (error) {
                 console.log(error.response.data);
             }
@@ -40,18 +41,17 @@ const postModule = {
         //         console.log(error.response.data);
         //     }
         // },
-        // async update({state, commit}, POST) {
-        //     try {
-        //         const response = await axios.put(`${RESOURCE_POSTS}/${POST.id}`, {
-        //             name: POST.name}, {
-        //             headers: { Authorization: 'Bearer ' + state.token }
-        //         })
-        //         commit('UPDATE_POST', response.data) 
+        async update({state, commit}, POST) {
+            try {
+                const response = await axios.put(`${RESOURCE_POSTS}/${POST.get('id')}`, POST, {
+                    headers: { Authorization: 'Bearer ' + state.token }
+                })
+                commit('UPDATE_POST', response.data) 
            
-        //     } catch (error) {
-        //         commit('GET_ERRORS',error.response.data)
-        //     }
-        // },
+            } catch (error) {
+                commit('GET_ERRORS',error.response.data)
+            }
+        },
         async create({state},POST) {
             try {
                 
